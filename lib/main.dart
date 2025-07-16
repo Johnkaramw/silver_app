@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:silvar_app/pages/home_page.dart';
+import 'package:silvar_app/pages/WelcomeScreen.dart';
 
 void main() {
-  runApp(const SilverApp());
+  runApp(const MyApp());
 }
 
-class SilverApp extends StatelessWidget {
-  const SilverApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Silver App',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: const SplashScreen(), // ✅ يبدأ من Splash
+    );
   }
 }
